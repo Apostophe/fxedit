@@ -29,7 +29,9 @@ async def on_message(message):
 		await message.channel.send(newmessage+f" ({message.author.display_name})")
 		await message.delete()
 	if client.user.mentioned_in(message):
-		elif 't\'as les cramptés' in message_content:
+		if 't\'as les cramptés' in message_content:
+			await message.channel.send("https://tenor.com/view/quoicoubeh-david-la-caill%C3%A9-apagnan-gif-27709036")
+		elif 'oui' in message_content:
 			await message.channel.send("https://tenor.com/view/quoicoubeh-david-la-caill%C3%A9-apagnan-gif-27709036")
 		elif 'quoi' in message_content and 'https://tenor.com/view/quoicoubeh-david-la-caill%C3%A9-apagnan-gif-27709036' not in message_content:
 			if random.randint(0, 1):
