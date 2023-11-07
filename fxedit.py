@@ -45,7 +45,7 @@ async def on_message(message):
 			else:
 				await message.channel.send("FEUR !")
 		else:
-			get_gif(message,message.channel)
+			await get_gif(message,message.channel)
 			
 async def get_gif(searchTerm,channel):  
 	response = requests.get("https://tenor.googleapis.com/v2/search?q={}&key={}&limit=50".format(searchTerm, TENOR_TOKEN))
