@@ -28,11 +28,12 @@ async def on_message(message):
 		newmessage = "".join(tmp[0]+'fixupx.com'+tmp[1])
 		await message.channel.send(newmessage+f" ({message.author.display_name})")
 		await message.delete()
-	elif 't\'as les cramptés' in message_content:
-		await message.channel.send("https://tenor.com/view/quoicoubeh-david-la-caill%C3%A9-apagnan-gif-27709036")
-	elif 'quoi' in message_content and 'https://tenor.com/view/quoicoubeh-david-la-caill%C3%A9-apagnan-gif-27709036' not in message_content:
-		if random.randint(0, 1):
-			await message.channel.send("QOUBEH")
-		else:
-			await message.channel.send("FEUR !")
+	if client.user.mentioned_in(message):
+		elif 't\'as les cramptés' in message_content:
+			await message.channel.send("https://tenor.com/view/quoicoubeh-david-la-caill%C3%A9-apagnan-gif-27709036")
+		elif 'quoi' in message_content and 'https://tenor.com/view/quoicoubeh-david-la-caill%C3%A9-apagnan-gif-27709036' not in message_content:
+			if random.randint(0, 1):
+				await message.channel.send("QOUBEH")
+			else:
+				await message.channel.send("FEUR !")
 client.run(API_TOKEN)
