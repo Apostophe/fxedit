@@ -1,1 +1,9 @@
-discord.py==2.3.2
+discord.py
+aiohttp
+async-timeout
+attrs
+chardet
+idna
+multidict
+typing-extensions
+yarl
