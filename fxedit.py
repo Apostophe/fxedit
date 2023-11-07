@@ -2,11 +2,11 @@ import os
 import discord
 import re
 import random
-import json
-import requests
+#import json
+#import requests
 
 API_TOKEN = os.getenv('DISCORD_TOKEN')
-TENOR_TOKEN = os.getenv('TENOR_TOKEN')
+#TENOR_TOKEN = os.getenv('TENOR_TOKEN')
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -44,13 +44,13 @@ async def on_message(message):
 				await message.channel.send("QOUBEH")
 			else:
 				await message.channel.send("FEUR !")
-		else:
-			await get_gif(message,message.channel)
+		"""else:
+			await get_gif(message,message.channel)"""
 			
-async def get_gif(searchTerm,channel):  
+"""async def get_gif(searchTerm,channel):  
 	response = requests.get("https://tenor.googleapis.com/v2/search?q={}&key={}&limit=50".format(searchTerm, TENOR_TOKEN))
 	data = response.json()
 	gif = random.choice(data["results"])
-	await channel.send(return gif['media'][0]['gif']['url'])
+	await channel.send(return gif['media'][0]['gif']['url'])"""
 
 client.run(API_TOKEN)
