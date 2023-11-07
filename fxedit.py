@@ -7,10 +7,6 @@ intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
 guild = discord.Guild
-
-if __name__ == "__main__":
-	client.run(API_TOKEN)	
-
     
 @client.event
 async def on_message(message):
@@ -24,3 +20,5 @@ async def on_message(message):
 		newmessage = "".join(tmp[0]+'fxtwitter'+tmp[1])
 		await message.channel.send(newmessage+f" ({message.author.display_name})")
 		await message.delete()
+		
+client.run(API_TOKEN)
