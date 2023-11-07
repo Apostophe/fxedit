@@ -1,9 +1,8 @@
-MTE3MTM5OTA3OTU3MDQ2MDcwNA.GUtw-M.O4kRU_Zb8xEPnQqSfsvkB3n3Gd7ocjEQU-Kfw8
-
+import os
 import discord
 import re
 
-API_TOKEN = 'MTE3MTM5OTA3OTU3MDQ2MDcwNA.GUtw-M.O4kRU_Zb8xEPnQqSfsvkB3n3Gd7ocjEQU-Kfw8'
+API_TOKEN = os.getenv('DISCORD_TOKEN')
 
 client = discord.Client()
 guild = discord.Guild
