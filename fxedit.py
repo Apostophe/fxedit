@@ -11,7 +11,7 @@ guild = discord.Guild
     
 @client.event
 async def on_message(message):
-	message_content = message.content
+	message_content = message.content.lower()
 	message_author = message.author
 	print(message_content)
 	pattern_twitter = re.compile('^https://twitter.com')
