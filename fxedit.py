@@ -18,9 +18,6 @@ async def on_message(message):
 	message_content = message.content.lower()
 	message_author = message.author
 	message_type = message.type
-	print(message.type)
-	print(message_author)
-	print(message_content)
 	pattern_twitter = re.compile('^https://twitter.com')
 	pattern_x = re.compile('https://x.com')
 	if message_type == discord.MessageType.reply:
