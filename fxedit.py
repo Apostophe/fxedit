@@ -5,7 +5,7 @@ import random
 #import json
 #import requests
 
-API_TOKEN = 'MTE3MTM5OTA3OTU3MDQ2MDcwNA.GzFIog.iLOHE8-7UBhEBTN_9gcQi554dGpvR2L_zM0Zl0'
+API_TOKEN = os.getenv('DISCORD_TOKEN')
 
 intents = discord.Intents.default()
 intents.message_content = True
